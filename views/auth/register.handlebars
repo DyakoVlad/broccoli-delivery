@@ -1,0 +1,35 @@
+<h1>Register</h1>
+{{#each message}}
+    <div class="alert alert-danger">
+        {{message}}
+    </div>
+{{/each}}
+
+<form action="/auth/register" method="post" class="col-sm-6" enctype="multipart/form-data">
+    <div class="form-group row">
+        <label for="email" class="col-form-label">Enter your email</label>
+        <input type="text" name="email" value="{{email}}" class="form-control">
+
+    </div>
+    <div class="form-group row">
+        <label for="firstName" class="col-form-label">Enter your first name</label>
+        <input type="text" name="firstName" value="{{firstName}}" class="form-control">
+
+    </div>
+    <div class="form-group row">
+        <label for="lastName" class="col-form-label">Enter your last name</label>
+        <input type="text" name="lastName" value="{{lastName}}" class="form-control">
+
+    </div>
+    <div class="form-group row">
+        <div class="col-sm-6">
+        <label for="password" class="col-form-label">Enter your password</label>
+        <input type="password" name="password" class="form-control">
+        </div>
+        <div class="col-sm-6">
+        <label for="passwordConfirm" class="col-form-label">Confirm you password</label>
+        <input type="password" name="passwordConfirm" class="form-control">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

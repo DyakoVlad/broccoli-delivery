@@ -1,0 +1,34 @@
+<h1>Items</h1>
+
+<table class="table table-hover table-bordered">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Vegan</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Date of publication</th>
+        <th>View</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each dishes}}
+        <tr>
+            <td>{{id}}</td>
+            <td>{{name}}</td>
+            <td>{{vegan}}</td>
+            <td>{{category}}</td>
+            <td>{{price}}</td>
+            <td><img src="uploads/{{img}}" style="width: 30%"></td>
+            <td>{{formatDate date 'MMMM Do, HH:mm'}}</td>
+            <td><a href="/dishes/{{slug}}">View</a></td>
+            <td><a href="/dishes/edit/{{id}}"><button class="btn btn-primary">EDIT</button></a></td>
+            <td><form action="/dishes/delete/{{id}}?_method=DELETE" method="post"><button class="btn btn-danger">DELETE</button></form></td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>

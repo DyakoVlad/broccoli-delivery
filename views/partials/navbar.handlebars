@@ -1,0 +1,40 @@
+<!-- NAVIGATION BAR -->
+<nav class="navbar navbar-expand-lg navbar-default fixed-top">
+    <a class="navbar-brand" href="/dishes">Broccoli</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/dishes">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="/dishes/list">Items</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link" href="/dishes/create">Create item</a>
+            </li>
+
+            {{#if user}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/logout"><button class="btn btn-danger">Logout</button></a>
+                </li>
+            {{else}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/login"><button class="btn btn-success">Login</button></a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/auth/register"><button class="btn btn-success">Register</button></a>
+                </li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>

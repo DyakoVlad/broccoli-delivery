@@ -1,0 +1,49 @@
+.navbar-brand, .navbar li a, h1  {
+    color: #485e3f;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    padding-left: 30px;
+}
+
+.navbar li a {
+    font-size: 20px;
+}
+
+.navbar.active a, .navbar a:hover {
+    color: #3b9664;
+}
+
+.navbar {
+    background-color: #b9d5af;
+    padding-right: 100px;
+}
+
+.container-fluid {
+    padding: 100px 130px 20px 130px;
+    background-color: rgba(229, 255, 227, 0.69);
+}
+
+p, td {
+    font-size: 20px;
+    color: #485e3f;
+}
+
+th {
+    font-size: 20px;
+    color: #35452e;
+}
+
+thead {
+    background-color: rgba(182, 203, 181, 0.54);
+}
+
+.footer {
+    padding: 120px 30px 20px 30px;
+    background-color: #d5edd3;
+}
+
+.glyphicon-chevron-up {
+    color: #485e3f;
+}
